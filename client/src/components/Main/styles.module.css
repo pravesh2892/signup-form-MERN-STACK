@@ -145,10 +145,11 @@
 	.images {
 	  grid-template-columns: repeat(2, 1fr);
 	}
+	
   }
   
   @media (max-width: 480px) {
-	.search-section .search-input {
+	.search_section .search_input {
 	  width: 100%;
 	  min-width: unset;
 	  margin: 0 var(--default-margin);

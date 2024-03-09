@@ -109,3 +109,18 @@
 	cursor: pointer;
 	color: #999;
   }
+
+  
+@media (max-width: 768px) {
+	.right{
+		display: none;
+	}
+
+	.input{
+		width: 300px;
+	}
+
+	.form_container h1{
+		font-size: 30px;
+	}
+}
