@@ -96,3 +96,25 @@
 	color: white;
 	margin: 10px;
 }
+
+@media (max-width: 768px) {
+	
+	.signup_form_container {
+	  flex-direction: row; 
+	}
+  
+	.left {
+		display: none; 
+	  }
+	
+	  .right {
+		border-radius: 10px; 
+	  }
+
+	  .input{
+		width: 300px;
+	  }
+	  .form_container h1{
+		font-size: 30px;
+	  }
+  }

@@ -9,7 +9,7 @@ const Login = () => {
   const [data, setData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [showResetForm, setShowResetForm] = useState(false);
+ 
 
   const handleChange = ({ currentTarget: input }) => {
     setData({ ...data, [input.name]: input.value });
@@ -19,16 +19,14 @@ const Login = () => {
     setShowPassword(!showPassword);
   };
 
-  const handleToggleResetForm = () => {
-    setShowResetForm(!showResetForm);
-  };
-
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const url = "http://localhost:8080/api/auth";
       const { data: res } = await axios.post(url, data);
       localStorage.setItem("token", res.data);
+      alert("login successfully ")
       window.location = "/";
     } catch (error) {
       if (
@@ -78,12 +76,11 @@ const Login = () => {
               </span>
             </div>
             {error && <div className={styles.error_msg}>{error}</div>}
-			<Link to="/resetPassword">
-				<p>Forgote password</p>
-			</Link>
+          
             <button type="submit" className={styles.green_btn}>
               Sign In
             </button>
+
           </form>
         </div>
         <div className={styles.right}>

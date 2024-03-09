@@ -25,3 +25,136 @@
 	cursor: pointer;
 	margin-right: 20px;
 }
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 100vh;
+  }
+  
+  .title {
+	text-align: center;
+	margin-top: var(--default-margin);
+	color: #3bb19b;
+  }
+  
+  .buttons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: var(--default-margin);
+	margin-top: var(--medium-margin);
+	margin-bottom: var(--larger-margin);
+  }
+  
+  .buttons .btn,
+  .buttons .btn:active,
+  .buttons .btn:focus {
+	background-color: var(--primary-color);
+	box-shadow: none;
+	outline: none;
+	border: none;
+  }
+  
+  .error_msg {
+	color: #ff0000;
+	text-align: center;
+  }
+  
+  .loading {
+	color: #3bb19b;
+	text-align: center;
+	margin-top: 20px;
+	font-size: 20px;
+  }
+  
+  /* common css ends */
+  
+  /* search section starts */
+  
+  .search_section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: var(--default-margin);
+  }
+  
+  .search_section .search_input{
+	min-width: 500px;
+	padding: var(--default-spacing);
+  }
+  
+  .search_section .search-btn {
+	margin-left: var(--default-spacing);
+  }
+  
+  /* search section ends */
+  
+  /* filters section starts */
+  
+  .filters {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 1rem;
+	margin-top: var(--default-margin);
+  }
+  
+  .filters > * {
+	padding: 5px 10px;
+	background: #3bb19b;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  
+  /* filters section ends */
+  
+  /* images section starts */
+  
+  .images {
+	margin-top: var(--medium-margin);
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: var(--default-spacing);
+	justify-content: center;
+	align-items: center;
+	margin: 20px;
+  }
+  
+  .images .image {
+	width: 200px;
+	height: 200px;
+	justify-self: center;
+	align-self: center;
+	margin-left: 2rem;
+	border-radius: 10px;
+	transition: transform 0.5s;
+  }
+  
+  .images .image:hover {
+	transform: translateY(-3px);
+  }
+  
+ 
+  @media (max-width: 768px) {
+	.images {
+	  grid-template-columns: repeat(2, 1fr);
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.search-section .search-input {
+	  width: 100%;
+	  min-width: unset;
+	  margin: 0 var(--default-margin);
+	}
+  
+	.images {
+	  grid-template-columns: 1fr;
+	}
+  }
